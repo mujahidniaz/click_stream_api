@@ -2,12 +2,11 @@ package mysql
 
 import java.sql._;
 import java.sql.DriverManager
-
+import Java.Constants
 class MySQLConnector {
-  val driver = "com.mysql.jdbc.Driver"
-  val url = "jdbc:mysql://localhost/mysql?useSSL=false"
-  val username = "root"
-  val password = "root"
+  
+  
+
 
   def MySQLConnector() {
 
@@ -19,8 +18,8 @@ class MySQLConnector {
   def connect(): Boolean = {
     try {
       // make the connection
-      Class.forName(driver)
-      connection = DriverManager.getConnection(url, username, password)
+      Class.forName(Constants.MYSQL_JDBC_DRIVER)
+      connection = DriverManager.getConnection(Constants.MYSQL_JDBC_URL, Constants.MYSQL_USERNAME, Constants.MYSQL_PASSWORD)
       println("MySQL connection Successful")
       return true;
     } catch {

@@ -20,16 +20,16 @@ import java.util.Date
 import Java.JavaHelper
 import analytics_business_logic.AnalyticsAPI;
 import controllers.AnalyticsController
+import Java.Constants
 
 class ScalatraBootstrap extends LifeCycle {
   override def init(context: ServletContext) {
-    context mount (new AnalyticsController, "/*")
+    context mount (new AnalyticsController, "/*") // Adding Controller to the Context (AnalyticsController.scala)
   }
 }
 
 object SimpleScalatraRestService extends App {
-  val port = 7777
-  val server = new Server(port)
+  val server = new Server(Constants.SERVER_PORT)
 
   val context = new WebAppContext()
   context.setContextPath("/")

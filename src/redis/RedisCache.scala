@@ -1,7 +1,10 @@
 package redis
 import redis.clients.jedis.Jedis
+import Java.Constants
+
 class RedisCache {
-  val jedis = new Jedis("localhost");
+
+  val jedis = new Jedis(Constants.HOST_NAME);
 
   def writeToRedisCache(key: String, value: String): Unit = {
     try {
@@ -10,12 +13,24 @@ class RedisCache {
       case e: Exception => e.printStackTrace()
     }
   }
+  
+  
+  def clearCache(key:String)
+  {
+     try {
+      jedis.del(key+"-C")
+      jedis.del(key+"-I")
+      jedis.del(key+"-U")
+    } catch {
+      case e: Exception =>{ e.printStackTrace();}
+    }
+  }
 
   def readRedisCache(key: String): Long = {
     try {
       jedis.pfcount(key)
     } catch {
-      case e: Exception => return 0
+      case e: Exception =>{ e.printStackTrace(); return 0}
     }
   }
 }
