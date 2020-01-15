@@ -50,4 +50,21 @@ For Async calls we will have to keep a messaging Queue as well we can use **`Apa
 This was my first time using scala for Web Development / API development. I have used scala often for **`Spark`** and Data processing but never used for this purpose. 
 
 
+## Pre-Requisites:
+•	Docker Engine Must be installed
+•	Java 1.8 + must be installed and configured.
+
+
+## How to run the Solution:
+
+•	First open terminal go to Docker Directory in the Solution main folder
+•	run **`docker-compose up`** and docker images will setup.
+•	Now open the project in Eclipse and Run Server.scala. Server will start listening at port 7777
+•	Go to your browser and make request like 
+	`GET => http://localhost:7777/analytics?timestamp=1578651952635`
+	`POST => http://localhost:7777/analytics?timestamp=1578651952635&user=foo&click`
+
+
 ## Demo (Video):
+
+Kindly watch https://www.youtube.com/watch?v=ReCpv6FhC-I&feature=youtu.be this youtube video for Demo and how to get it Started.
