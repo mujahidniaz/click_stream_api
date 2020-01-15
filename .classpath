@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="jackson-core-2.9.6.jar"/>
+	<classpathentry kind="lib" path="jackson-databind-2.9.6.jar"/>
+	<classpathentry kind="lib" path="json4s-ast_2.11-3.6.0.jar"/>
+	<classpathentry kind="lib" path="json4s-core_2.11-3.6.0.jar"/>
+	<classpathentry kind="lib" path="json4s-jackson_2.11-3.6.0.jar"/>
+	<classpathentry kind="lib" path="json4s-scalap_2.11-3.6.0.jar"/>
+	<classpathentry kind="lib" path="scala-library-2.9.2.jar"/>
+	<classpathentry kind="lib" path="scalatra-json_2.11-2.6.5.jar"/>
+	<classpathentry kind="lib" path="commons-lang3-3.9.jar"/>
+	<classpathentry kind="lib" path="javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="jetty-http-9.4.6.v20170531.jar"/>
+	<classpathentry kind="lib" path="jetty-io-9.4.6.v20170531.jar"/>
+	<classpathentry kind="lib" path="jetty-security-9.4.6.v20170531.jar"/>
+	<classpathentry kind="lib" path="jetty-server-9.4.6.v20170531.jar"/>
+	<classpathentry kind="lib" path="jetty-servlet-9.4.6.v20170531.jar"/>
+	<classpathentry kind="lib" path="jetty-util-9.4.6.v20170531.jar"/>
+	<classpathentry kind="lib" path="juniversalchardet-1.0.3.jar"/>
+	<classpathentry kind="lib" path="paranamer-2.8.jar"/>
+	<classpathentry kind="lib" path="scala-library-2.11.12.jar"/>
+	<classpathentry kind="lib" path="scala-parser-combinators_2.11-1.1.1.jar"/>
+	<classpathentry kind="lib" path="scala-xml_2.11-1.2.0.jar"/>
+	<classpathentry kind="lib" path="scalatra_2.11-2.7.0-RC1.jar"/>
+	<classpathentry kind="lib" path="scalatra-common_2.11-2.7.0-RC1.jar"/>
+	<classpathentry kind="lib" path="scalatra-jetty_2.11-2.7.0-RC1.jar"/>
+	<classpathentry kind="lib" path="slf4j-api-1.7.26.jar"/>
+	<classpathentry kind="lib" path="jetty-runner-9.4.6.v20180619.jar"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.48.jar"/>
+	<classpathentry kind="lib" path="jedis-3.2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
