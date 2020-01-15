@@ -40,4 +40,14 @@ Since memory is a limited resource, doing this becomes problematic when working 
 
 A HyperLogLog solves this problem by allowing to trade memory consumption for precision making it possible to estimate cardinalities larger than 109 with a standard error of 2% using only 1.5 kilobytes of memory
 
-So in this case I can keep aggregated data for 24 Hours which can handle 99% of the requests and in case of 1% (maybe never) we will have to query MySQL. and Each key takes up to **`12 MB`** of data. So in this case 3 keys (impressions, Users, Clicks) **`3*12=36 MB`** for an hour. **`36*24=864 MB` can handle 24 Hours of requests in Memory with lighting speed due to Multi level Hashing and each key (Hash) will avoid the extra calculations.
+So in this case I can keep aggregated data for 24 Hours which can handle 99% of the requests and in case of 1% (maybe never) we will have to query MySQL. and Each key takes up to **`12 MB`** of data. So in this case 3 keys (impressions, Users, Clicks) **`3*12=36 MB`** for an hour. **`36*24=864 MB`** can handle 24 Hours of requests in Memory with lighting speed due to Multi level Hashing and each key (Hash) will avoid the extra calculations.
+
+### Further Improvements that I can do if I get more time:
+Further improvements would be to use **`Scala Play framework`** for Async API Calls which will work much more faster but that can complicate the solution so i kept it for future developments.
+
+For Async calls we will have to keep a messaging Queue as well we can use **`Apache Kafka, ActiveMQ or RabitMQ`** so that MySQL Queries can be queued and executed according to ACID principle. Otherwise MySQL might get choked due to multiple conqurent writes.
+
+This was my first time using scala for Web Development / API development. I have used scala often for **`Spark`** and Data processing but never used for this purpose. 
+
+
+## Demo (Video):
